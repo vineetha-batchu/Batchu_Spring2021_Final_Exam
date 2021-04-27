@@ -10,10 +10,21 @@ package question2;
  * @author Vineetha Batchu
  */
 public class Square extends GeometricObject implements Colorable {
-    private double sidelength;
 
-    public Square(double sidelength) {
+    private double sidelength;
+    private boolean colorable;
+
+    public Square(double sidelength, boolean colorable) {
         this.sidelength = sidelength;
+        this.colorable = colorable;
+    }
+
+    public double getSidelength() {
+        return sidelength;
+    }
+
+    public boolean isColorable() {
+        return colorable;
     }
 
     @Override
@@ -23,7 +34,7 @@ public class Square extends GeometricObject implements Colorable {
 
     @Override
     public double area() {
-        return sidelength*sidelength;
+        return sidelength * sidelength;
     }
 
 }

@@ -16,12 +16,17 @@ public class Driver {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GeometricObject[] squares = {new Square(8), new Square(20),
-            new Square(25), new Square(30), new Square(55)};
+        GeometricObject[] squares = {new Square(8, true), new Square(20, false),
+            new Square(25, true), new Square(30, true), new Square(55, false)};
         for (GeometricObject o : squares) {
-             System.out.println("Area is "+o.area());
-             Square s=(Square)o;
-             s.howToColor();
+            System.out.println("-----------------------------");
+            System.out.println("Area is " + o.area());
+            Square s = (Square) o;
+            if (s.isColorable()) {
+                s.howToColor();
+            }
+            System.out.println("-----------------------------");
+            
         }
     }
 
